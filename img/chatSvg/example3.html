@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shalena Menu</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 1200px;
+            margin: auto;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            letter-spacing: 6px;
+            margin-bottom: 0;
+        }
+
+        .subtitle {
+            text-align: center;
+            letter-spacing: 3px;
+            margin-bottom: 40px;
+        }
+
+        .section {
+            margin-top: 40px;
+        }
+
+        .section h2 {
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+
+        .grid {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            width: 120px;
+            text-align: center;
+        }
+
+        svg.icon {
+            width: 64px;
+            height: 64px;
+            stroke: #1a1a1a;
+        }
+
+        .price {
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- SVG SYMBOLS -->
+    <svg width="0" height="0" style="position:absolute">
+
+        <!-- Айс латте -->
+        <symbol id="icon-iced-latte" viewBox="0 0 64 64">
+            <rect x="20" y="10" width="24" height="44" rx="8" fill="none" stroke="currentColor" stroke-width="2" />
+            <line x1="32" y1="10" x2="32" y2="0" stroke="currentColor" stroke-width="2" />
+            <circle cx="26" cy="28" r="3" fill="none" stroke="currentColor" />
+            <circle cx="36" cy="36" r="3" fill="none" stroke="currentColor" />
+        </symbol>
+
+        <!-- Лимонад -->
+        <symbol id="icon-lemonade" viewBox="0 0 64 64">
+            <rect x="18" y="10" width="28" height="44" rx="10" fill="none" stroke="currentColor" stroke-width="2" />
+            <circle cx="32" cy="22" r="6" fill="none" stroke="currentColor" />
+        </symbol>
+
+        <!-- Мохито -->
+        <symbol id="icon-mojito" viewBox="0 0 64 64">
+            <rect x="20" y="10" width="24" height="44" rx="8" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="M28 26c4-6 8 6 12 0" fill="none" stroke="currentColor" />
+        </symbol>
+
+        <!-- Эспрессо -->
+        <symbol id="icon-espresso" viewBox="0 0 64 64">
+            <rect x="16" y="26" width="32" height="14" rx="6" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="M48 28c10 4 10 8 0 12" fill="none" stroke="currentColor" />
+        </symbol>
+
+        <!-- Американо -->
+        <symbol id="icon-americano" viewBox="0 0 64 64">
+            <rect x="14" y="20" width="36" height="20" rx="8" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="M50 24c8 4 8 8 0 12" fill="none" stroke="currentColor" />
+        </symbol>
+
+        <!-- Капучино -->
+        <symbol id="icon-cappuccino" viewBox="0 0 64 64">
+            <rect x="14" y="22" width="36" height="18" rx="8" fill="none" stroke="currentColor" />
+            <path d="M24 18c4-6 12-6 16 0" fill="none" stroke="currentColor" />
+        </symbol>
+
+        <!-- Вафля -->
+        <symbol id="icon-waffle" viewBox="0 0 64 64">
+            <rect x="10" y="10" width="44" height="44" rx="8" fill="none" stroke="currentColor" />
+            <line x1="10" y1="32" x2="54" y2="32" stroke="currentColor" />
+            <line x1="32" y1="10" x2="32" y2="54" stroke="currentColor" />
+        </symbol>
+
+    </svg>
+
+    <div class="container">
+
+        <h1>SHALENA</h1>
+        <div class="subtitle">COFFEE & WAFFLES</div>
+
+        <!-- Холодные -->
+        <div class="section">
+            <h2>ХОЛОДНЫЕ НАПИТКИ</h2>
+            <div class="grid">
+
+                <div class="item">
+                    <svg class="icon">
+                        <use href="#icon-iced-latte" />
+                    </svg>
+                    <div>Айс латте</div>
+                    <div class="price">230 ₽</div>
+                </div>
+
+                <div class="item">
+                    <svg class="icon">
+                        <use href="#icon-lemonade" />
+                    </svg>
+                    <div>Лимонад</div>
+                    <div class="price">190 ₽</div>
+                </div>
+
+                <div class="item">
+                    <svg class="icon">
+                        <use href="#icon-mojito" />
+                    </svg>
+                    <div>Мохито</div>
+                    <div class="price">210 ₽</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Горячие -->
+        <div class="section">
+            <h2>ГОРЯЧИЕ НАПИТКИ</h2>
+            <div class="grid">
+
+                <div class="item">
+                    <svg class="icon">
+                        <use href="#icon-espresso" />
+                    </svg>
+                    <div>Эспрессо</div>
+                    <div class="price">120 ₽</div>
+                </div>
+
+                <div class="item">
+                    <svg class="icon">
+                        <use href="#icon-americano" />
+                    </svg>
+                    <div>Американо</div>
+                    <div class="price">150 ₽</div>
+                </div>
+
+                <div class="item">
+                    <svg class="icon">
+                        <use href="#icon-cappuccino" />
+                    </svg>
+                    <div>Капучино</div>
+                    <div class="price">190 ₽</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Вафли -->
+        <div class="section">
+            <h2>ВАФЛИ</h2>
+            <div class="grid">
+
+                <div class="item">
+                    <svg class="icon">
+                        <use href="#icon-waffle" />
+                    </svg>
+                    <div>Классическая</div>
+                    <div class="price">180 ₽</div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
