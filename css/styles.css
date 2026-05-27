@@ -16,7 +16,7 @@
    transform: scale(.5);
    transform-origin: top left;
    position: relative;
-   overflow: hidden;
+   /* overflow: hidden; */
 
    background-color: #F6F1E8;
    /* background: linear-gradient(180deg, #F6F1E8, #EFE7DC); */
