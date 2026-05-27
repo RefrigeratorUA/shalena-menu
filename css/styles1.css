@@ -1,0 +1,634 @@
+ html,
+ body,
+ p,
+ div {
+   margin: 0;
+   padding: 0;
+ }
+
+ /* Контейнер A0 */
+ .a0 {
+   width: 841mm;
+   height: 1189mm;
+   position: relative;
+   overflow: hidden;
+
+   background-color: #F6F1E8;
+   /* background: linear-gradient(180deg, #F6F1E8, #EFE7DC); */
+
+   z-index: 0;
+ 
+ }
+
+ .a0::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+   background: url("../img/puzzle-bg-5.png");
+   background-repeat: repeat;
+   
+   background-size: 3950px;
+   opacity: .15;
+   pointer-events: none;
+   
+   border: 5px solid red;
+ }
+
+ .a0>* {
+   position: relative;
+   z-index: 2;
+ }
+
+ /* Контент внутри */
+ .content {
+   position: absolute;
+   inset: 0;
+   font-family: "Montserrat", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   font-style: normal;
+   /* border: 2px solid lime; */
+
+ }
+
+ /* Логотип */
+ .logo {
+   display: block;
+   width: 1000px;
+   margin: 0 auto;
+   margin-top: 150px;
+   margin-bottom: 150px;
+
+   /* Генерация фильтра для цвета #9CAF88 из черного (#000000) */
+   /* filter: invert(72%) sepia(19%) saturate(464%) hue-rotate(44deg) brightness(96%) contrast(85%); */
+   
+   /* color: #2B1D17; */
+   /* filter: invert(10%) sepia(21%) saturate(1005%) hue-rotate(334deg) brightness(97%) contrast(93%); */
+   /* filter: invert(11%) sepia(20%) saturate(784%) hue-rotate(338deg) brightness(95%) contrast(92%); */
+   filter: brightness(0) saturate(100%) invert(11%) sepia(20%) saturate(784%) hue-rotate(338deg) brightness(95%) contrast(92%);
+   
+   /* color: #F6F1E8; */
+   /* filter: invert(99%) sepia(4%) saturate(601%) hue-rotate(323deg) brightness(101%) contrast(93%); */
+ }
+
+ /* Меню */
+ .menu-main {
+   /* 1. Masonry эффект: блоки липнут друг к другу */
+   column-count: 2;
+   column-gap: 0px;
+
+   /* 2. Высота: чтобы блоки понимали, куда тянуться */
+   /* height: 3905px; */
+   height: 3810px;
+   column-fill: auto;
+   /* padding: 0 50px 0 50px; */
+   /* Важно: заполняем колонки по очереди */
+
+   width: 100%;
+   /* border: 2px solid blue; */
+   /* background-color: bisque; */
+   /* Просто для контроля границ */
+ }
+
+ .emoji-list {
+
+   /* 3. Обязательно block для колонок */
+   display: block;
+   width: 97%;
+   margin: 0 auto;
+   margin-left: 16px;
+   margin-bottom: 30px;
+   
+
+   /* 4. Чтобы блоки "дышали" и заполняли высоту, 
+        дадим им минимальную высоту или маржины */
+   break-inside: avoid;
+
+   box-sizing: border-box;
+   border: 3px solid #9CAF88;
+   border-radius: 20px;
+   padding: 15px;
+
+   list-style: none;
+
+ }
+
+ .emoji-list:nth-child(1) {
+   /* margin-top: 0; */
+   /* margin-right: 23px; */
+   /* margin-bottom: 0; */
+   margin-left: 31px;
+ }
+
+ /* 5. ЦЕНТРИРУЕМ ПОСЛЕДНИЙ */
+ /* .emoji-list:last-child:nth-child(odd) { */
+ .ul-last {
+   /* column-span: all вырывает блок из колонок и ставит под ними */
+   column-span: all;
+
+   /* width: calc(60% - 0px); */
+   width: 95%;
+   margin: 0 auto;
+   /* Центровка */
+   margin-top: 170px;
+   display: block;
+   /* transform: translateY(10px); */
+   /* Небольшой отступ от колонок */
+   border: none;
+   background: #2B1D17;
+   color: #F6F1E8;
+ }
+
+.title {
+  font-size: 70pt;
+  /* text-align: center; */
+  /* line-height: 1; */
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: #2B1D17;
+}
+
+.title::before {
+  content: "";
+  margin-right: 30px;
+  display: inline-block;
+  width: 100px;
+  height: 5px;
+  vertical-align: middle;
+  background: #9CAF88;
+}
+
+.ul-last>h2 {
+  font-size: 70pt;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.ul-last>h2::before {
+  content: "";
+    margin-right: 30px;
+    display: inline-block;
+    width: 130px;
+    height: 5px;
+    vertical-align: middle;
+    /* background: #9CAF88; */
+}
+
+.emoji-list.ul-last>li {
+  margin-bottom: 27px;
+  line-height: 2;
+
+}
+
+ ul.emoji-list li {
+   display: grid;
+   grid-template-columns: auto max-content 1fr max-content;
+   grid-template-rows: 1fr auto;
+   grid-template-areas:
+        "one two two two"
+        "one three spacer four";
+   gap: 10px;
+   
+   justify-content: space-between;
+   /* align-items: center; */
+   width: 100%;
+   margin-bottom: 65px;
+   /* Немного места между строчками меню */
+   font-size: 65pt;
+   /* border: 1px solid blue; */
+
+ }
+
+ ul.emoji-list li::before {
+   content: '';
+   grid-area: one;
+
+
+   /* display: block; */
+   width: 150px;
+   height: 150px;
+   flex-shrink: 0;
+
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+
+   align-self: center;
+
+   /* border: 1px solid purple; */
+ }
+
+ .item-menu {
+  grid-area: two;
+ }
+
+ .option {
+  display: inline-block;
+  padding-left: 20px;
+  font-size: 40pt;
+ }
+ 
+ li>span {
+  display: block;
+  grid-area: three;
+  /* margin-left: auto; */
+   /* Прижимает span к p */
+   white-space: nowrap;
+   font-size: 50px;
+   /* color: blueviolet; */
+
+   /* МАГИЯ: прижимаем цену к низу */
+   align-self: flex-end;
+   line-height: 0.9;
+ }
+
+ .spacer {
+    grid-area: spacer;
+    border-bottom: 5px dotted black;
+ }
+
+ li>p {
+   display: block;
+   grid-area: four;
+   margin: 0;
+   text-align: right;
+   font-size: 70%;
+   font-weight: bold;
+   white-space: nowrap;
+
+   align-self: flex-end;
+   line-height: 0.9;
+ }
+
+ /* Иконка для кофе */
+ .coffee1::before {
+   content: '';
+   display: inline-block;
+   width: 32px;
+   height: 32px;
+
+   background-color: black;
+
+
+   mask-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><path d='M29.984 15.548c-0.378-3.639-4.063-3.618-5.977-3.553 0.009-0.553 0.015-0.999 0.015-0.999l-22.027-0.007c0 0 0 3.014 0 3.089 0 4.281 2.445 7.984 6.011 9.809v1.068h10.019v-1.068c1-0.512 1.897-1.184 2.691-1.961 4.915-1.176 10.070-2.873 9.268-6.378zM22.25 20.066c1.123-1.725 1.786-3.775 1.786-5.988 0 0.017 0.001-0.029 0.002-0.116 1.785-0.059 3.755-0.237 4.201 1.54 0.448 1.955-2.817 3.547-5.989 4.564zM8.83 6.99c0 1-1.64 2.065-1.64 2.065s3.214-0.574 3.214-2.074-3.187-0.5-3.187-1.625 1.577-2.19 1.577-2.19-3.025 0.637-3.025 2.199 3.061 0.625 3.061 1.625zM13.83 7.99c0 1-1.64 2.065-1.64 2.065s3.214-0.574 3.214-2.074-3.187-0.5-3.187-1.625 1.577-2.19 1.577-2.19-3.026 0.637-3.026 2.199 3.062 0.625 3.062 1.625zM17.83 6.99c0 1-1.64 2.065-1.64 2.065s3.214-0.574 3.214-2.074-3.187-0.5-3.187-1.625 1.577-2.19 1.577-2.19-3.026 0.637-3.026 2.199 3.062 0.625 3.062 1.625zM1.933 25.928c0 1.381 4.925 2.5 11 2.5s11-1.119 11-2.5c0 0.029-22 0.029-22 0z' ></path></svg>");
+
+   mask-repeat: no-repeat;
+   mask-size: contain;
+ }
+
+ .coffeescript::before {
+   content: '';
+   display: inline-block;
+   width: 32px;
+   height: 32px;
+
+   background-color: black;
+
+
+   mask-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><path d='M6.187 9.96c2.8 0.707 6.373 1.067 10.68 1.067 4.4 0 7.893-0.36 10.68-1.067 2.973-0.693 4.4-1.627 4.4-2.507 0-0.627-0.64-1.24-1.8-1.707 0.267 0.173 0.467 0.467 0.467 0.787 0 0.893-1.347 1.627-4.053 2.24-2.507 0.547-5.707 0.933-9.6 0.933-3.76 0-7.107-0.387-9.52-0.907-2.6-0.64-3.96-1.333-3.96-2.24 0-0.373 0.173-0.693 0.693-1.067-1.627 0.627-2.507 1.16-2.507 1.96 0.093 0.907 1.547 1.813 4.52 2.507zM12.44 7.080c3.027-0.267 3.907-2.213 7.453-2.533 1.747-0.133 2.853 0.213 2.973 0.827 0.107 0.573-0.76 0.96-1.813 1.040-1.453 0.147-2.053-0.373-2.173-0.867-1.080 0.12-1.253 0.573-1.2 0.893 0.12 0.613 1.427 1.227 3.667 1.013 2.533-0.2 3.387-1.2 3.173-2.2-0.267-1.307-2.213-2.4-5.707-2.067-4.48 0.4-4.453 2.48-7.507 2.733-1.253 0.12-1.947-0.173-2.067-0.667-0.080-0.493 0.533-0.733 1.253-0.787 0.667-0.067 1.48 0.053 1.867 0.267 0.28-0.147 0.373-0.293 0.347-0.467-0.133-0.467-1.053-0.667-2.213-0.587-2.267 0.2-2.267 1.213-2.187 1.667 0.227 1.16 1.973 1.933 4.133 1.733zM27.667 12.2c-2.8 0.653-6.373 1.080-10.68 1.080-4.4 0-7.987-0.453-10.773-1.067-2.507-0.64-3.84-1.347-4.307-2.080 0.24 1.64 0.653 3.227 1.187 4.733-0.64 0.4-1.213 0.893-1.733 1.56-0.852 1.032-1.368 2.367-1.368 3.823 0 0.109 0.003 0.217 0.009 0.325l-0.001-0.015c0.103 1.43 0.818 2.674 1.882 3.485l0.012 0.009c1.16 0.907 2.413 1.173 3.84 0.907 0.547-0.093 1.16-0.373 1.72-0.56-1.173 0-2.16-0.373-3.147-1.16-1.058-0.742-1.792-1.884-1.984-3.201l-0.003-0.026c-0.267-1.253 0-2.413 0.707-3.44 0.16-0.2 0.333-0.373 0.52-0.533 0.4 0.973 0.827 1.933 1.307 2.827 1.080 1.64 2.16 3.067 3.24 4.613 0.467 0.907 0.773 1.8 0.987 2.693 0.715 0.979 1.744 1.692 2.937 1.992l0.036 0.008c1.533 0.533 3.133 0.773 4.773 0.68h0.173c0.177 0.008 0.385 0.013 0.594 0.013 1.548 0 3.035-0.259 4.421-0.735l-0.096 0.029c1.179-0.352 2.166-1.049 2.87-1.973l0.010-0.014h0.093c0.173-0.893 0.467-1.787 0.893-2.693 1.067-1.56 2.16-2.973 3.227-4.613 1.39-2.52 2.432-5.45 2.963-8.554l0.023-0.166c-0.573 0.8-1.92 1.507-4.333 2.053z'></path></svg>");
+
+   mask-repeat: no-repeat;
+   mask-size: contain;
+ }
+
+ .ice-late::before {
+   content: '';
+   display: inline-block;
+   width: 32px;
+   height: 32px;
+
+   background-image: url('../img/chatSvg/set1_color/icon-ice_latte-color.svg');
+   background-size: contain;
+   background-repeat: no-repeat;
+ }
+
+ .ice-late2::before {
+   content: '';
+   display: inline-block;
+   width: 32px;
+   height: 32px;
+
+   background-image: url('../img/chatSvg/set1_color/icon-ice_latte2-color.svg');
+   background-size: contain;
+   background-repeat: no-repeat;
+ }
+
+ .ice-late-polunycia::before {
+   content: '';
+   display: inline-block;
+   width: 32px;
+   height: 32px;
+
+   background-image: url('../img/chatSvg/set1_color/icon-ice_latte_polunycia-color.svg');
+   background-size: contain;
+   background-repeat: no-repeat;
+ }
+
+ .lemonade::before {
+   content: '';
+   display: inline-block;
+   width: 32px;
+   height: 32px;
+
+   background-image: url('../img/chatSvg/set1_color/icon-lemonade-color.svg');
+   background-size: contain;
+   background-repeat: no-repeat;
+ }
+
+ .ice-coffee::before {
+   content: '';
+   display: inline-block;
+   width: 32px;
+   height: 32px;
+
+   background-image: url('../img/chatSvg/set1_color/icon-ice_coffee-color.svg');
+   background-size: contain;
+   background-repeat: no-repeat;
+ }
+
+ .gin-tonic::before {
+   content: '';
+   display: inline-block;
+   width: 32px;
+   height: 32px;
+
+   background-image: url('../img/chatSvg/set1_color/icon-gin_tonic-color.svg');
+   background-size: contain;
+   background-repeat: no-repeat;
+ }
+
+ .tiramisu::before {
+   content: '';
+   display: inline-block;
+   width: 32px;
+   height: 32px;
+
+   background-image: url('../img/chatSvg/set1_color/icon-tiramisu-color.svg');
+   background-size: contain;
+   background-repeat: no-repeat;
+ }
+
+ .fizz::before {
+   content: '';
+   display: inline-block;
+   width: 32px;
+   height: 32px;
+
+   background-image: url('../img/chatSvg/set1_color/icon-matcha-fizz-color.svg');
+   background-size: contain;
+   background-repeat: no-repeat;
+ }
+
+.shalenyi::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+
+  background-image: url('../img/chatSvg/set1_color/icon-shalenyi-color.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.shalena::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+
+  background-image: url('../img/chatSvg/set1_color/icon-shalena-color.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.green-tea::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+
+  background-image: url('../img/chatSvg/set1_color/icon-green_tea_ice-color.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.fizz-tea::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+
+  background-image: url('../img/chatSvg/set1_color/icon-fizz_fruit-color.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.gliase::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+
+  background-image: url('../img/chatSvg/set1_color/icon-gliase-color.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bee::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+
+  background-image: url('../img/chatSvg/set1_color/icon-bee-color.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.espresso-tonic::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+
+  background-image: url('../img/chatSvg/set1_color/icon-espresso-color.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.moon::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+
+  background-image: url('../img/chatSvg/set1_color/icon-moon-color.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.frap::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+
+  background-image: url('../img/chatSvg/set1_color/icon-frap-color.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.cold-bru::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+
+  background-image: url('../img/chatSvg/set1_color/icon-cold_bru-color.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.lemonade2::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+
+  background-image: url('../img/chatSvg/set1_color/icon-lemonade2-color.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.apple-tarhun::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+
+  background-image: url('../img/chatSvg/set1_color/icon-apple_tarhun-color.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.lemonade-polunycia::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+
+  background-image: url('../img/chatSvg/set1_color/icon-lemonade_polunycia-color.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.lemonade-lichi::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+
+  background-image: url('../img/chatSvg/set1_color/icon-lemonade_lichi-color.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.matcha-latte::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+
+  background-image: url('../img/chatSvg/set1_color/icon-matcha_latte-color.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.matcha-orange::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+
+  background-image: url('../img/chatSvg/set1_color/icon-matcha_orange-color.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.matcha-tonic::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+
+  background-image: url('../img/chatSvg/set1_color/icon-matcha_tonic-color.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+ /* Линии разреза для визуализации A4 */
+ .cut-line {
+   position: absolute;
+   background: rgba(0, 0, 0, 0.3);
+ }
+
+ /* Вертикальные линии A4 */
+ .v1 {
+   left: 210mm;
+   width: 1px;
+   height: 100%;
+ }
+
+ .v2 {
+   left: 420mm;
+   width: 1px;
+   height: 100%;
+ }
+
+ .v3 {
+   left: 630mm;
+   width: 1px;
+   height: 100%;
+ }
+
+ /* Горизонтальные линии A4 */
+ .h1 {
+   top: 297mm;
+   height: 1px;
+   width: 100%;
+ }
+
+ .h2 {
+   top: 594mm;
+   height: 1px;
+   width: 100%;
+ }
+
+ .h3 {
+   top: 891mm;
+   height: 1px;
+   width: 100%;
+ }
+
+ @media print {
+   @page {
+     size: A4;
+     margin: 0;
+   }
+
+   body {
+     margin: 0;
+   }
+
+   .a0 {
+     width: 841mm;
+     height: 1189mm;
+   }
+   
+ }
