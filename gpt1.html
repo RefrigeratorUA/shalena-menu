@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shalena Menu</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(180deg, #F6F1E8, #EFE7DC);
+            color: #2B1D17;
+        }
+
+        .wrap {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 40px;
+        }
+
+        /* HEADER */
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo h1 {
+            font-size: 64px;
+            font-family: "Georgia", serif;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        .logo p {
+            margin: 5px 0 0;
+            letter-spacing: 6px;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .title::before {
+            content: "";
+            width: 25px;
+            height: 2px;
+            background: #9CAF88;
+        }
+
+        /* ITEM */
+        .item {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            font-size: 15px;
+        }
+
+        .item span {
+            opacity: 0.8;
+        }
+
+        .price {
+            font-weight: bold;
+        }
+
+        .meta {
+            font-size: 12px;
+            opacity: 0.6;
+        }
+
+        /* CARD */
+        .card {
+            margin-top: 30px;
+            padding: 20px;
+            background: #2B1D17;
+            color: #F6F1E8;
+            border-radius: 14px;
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            letter-spacing: 2px;
+        }
+
+        .card p {
+            margin: 0;
+            opacity: 0.8;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap">
+
+        <!-- LOGO -->
+        <div class="logo">
+            <h1>Shalena</h1>
+            <p>KAVA & WAFLI</p>
+        </div>
+
+        <!-- GRID -->
+        <div class="grid">
+
+            <!-- LEFT -->
+            <div>
+
+                <div class="section">
+                    <div class="title">ХОЛОДНІ НАПОЇ</div>
+
+                    <div class="item">
+                        <span>Айс Лате</span>
+                        <div>
+                            <span class="meta">400 мл</span>
+                            <span class="price">90 ₴</span>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <span>Фрапучіно</span>
+                        <div>
+                            <span class="meta">400 мл</span>
+                            <span class="price">95 ₴</span>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <span>Колд Брю</span>
+                        <div>
+                            <span class="meta">400 мл</span>
+                            <span class="price">90 ₴</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+            <div>
+
+                <div class="section">
+                    <div class="title">ЛИМОНАДИ</div>
+
+                    <div class="item">
+                        <span>Класичний лимон</span>
+                        <div>
+                            <span class="meta">400 мл</span>
+                            <span class="price">90 ₴</span>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <span>Полуничний</span>
+                        <div>
+                            <span class="meta">400 мл</span>
+                            <span class="price">90 ₴</span>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <span>Лічі</span>
+                        <div>
+                            <span class="meta">400 мл</span>
+                            <span class="price">90 ₴</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- PREMIUM CARD -->
+        <div class="card">
+            <h3>Коктейльна карта</h3>
+            <p>Уточніть у бариста доступні авторські коктейлі</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
