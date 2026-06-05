@@ -18,8 +18,13 @@
    position: relative;
    /* overflow: hidden; */
 
-   background-color: #F6F1E8;
+   /* background-color: #879e81; */
+   /* background-color: #F6F1E8; */
    /* background: linear-gradient(180deg, #F6F1E8, #EFE7DC); */
+   background: linear-gradient(180deg,
+      #F6F1E8 0%,
+      #D8E4D2 45%,
+      #C1D6BD 100%);
 
    z-index: 0;
  
@@ -65,14 +70,14 @@
    position: absolute;
 
    left: 50%;
-   top: 50%;
-   bottom: 50%;
+   top: 40%;
+   /* bottom: 50%; */
 
    transform: translateX(-50%);
 
-   width: 1000px;
+   width: 2000px;
 
-   opacity: .10;
+   opacity: .12;
 
    pointer-events: none;
 
@@ -219,8 +224,8 @@
 
 
    /* display: block; */
-   width: 150px;
-   height: 150px;
+   width: 110px;
+   height: 110px;
    flex-shrink: 0;
 
    background-repeat: no-repeat;
