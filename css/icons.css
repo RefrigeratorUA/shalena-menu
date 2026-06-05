@@ -29,6 +29,7 @@
     mask-size: contain;
 }
 
+/* set1_color Ice drink */
 .ice-late::before {
     content: '';
     display: inline-block;
@@ -300,6 +301,18 @@
     height: 32px;
 
     background-image: url('../img/chatSvg/set1_color/icon-matcha_tonic-color.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* set2_color hot coffee & tea */
+.ice-late::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+
+    background-image: url('../img/chatSvg/set1_color/icon-ice_latte-color.svg');
     background-size: contain;
     background-repeat: no-repeat;
 }

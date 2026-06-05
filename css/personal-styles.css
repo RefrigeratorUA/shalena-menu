@@ -1,3 +1,7 @@
-.list-coffee-hot-continue {
-    padding-top: 190px !important;
+ .emoji-list:nth-of-type(1) {
+     height: 2105px;
+ }
+
+.emoji-list.list-coffee-hot-continue {
+    padding-top: 190px;
 }

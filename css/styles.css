@@ -120,10 +120,6 @@
 
  }
 
- .emoji-list:nth-of-type(1) {
-   height: 2100px;
- }
-
  .ul-last {
    /* column-span: all вырывает блок из колонок и ставит под ними */
    column-span: all;
