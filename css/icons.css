@@ -306,13 +306,13 @@
 }
 
 /* set2_color hot coffee & tea */
-.ice-late::before {
+.coffee-cup::before {
     content: '';
     display: inline-block;
     width: 32px;
     height: 32px;
 
-    background-image: url('../img/chatSvg/set1_color/icon-ice_latte-color.svg');
+    background-image: url('../img/chatSvg/set2_color/SVG/icon-hot_coffee-color.svg');
     background-size: contain;
     background-repeat: no-repeat;
 }
