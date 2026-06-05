@@ -305,7 +305,10 @@
     background-repeat: no-repeat;
 }
 
+
+
 /* set2_color hot coffee & tea */
+
 .coffee-cup::before {
     content: '';
     display: inline-block;
@@ -313,6 +316,127 @@
     height: 32px;
 
     background-image: url('../img/chatSvg/set2_color/SVG/icon-hot_coffee-color.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.coffee-cup-chocolade::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+
+    background-image: url('../img/chatSvg/set2_color/SVG/icon-hot_coffee_chocolade-color.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.coffee-cup-capuchino::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+
+    background-image: url('../img/chatSvg/set2_color/SVG/icon-hot_capuchino2-color.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.coffee-cup-hot-latte::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+
+    background-image: url('../img/chatSvg/set2_color/SVG/icon-hot_latte-color.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.coffee-cup-hot-latte-polunycia::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+
+    background-image: url('../img/chatSvg/set2_color/SVG/icon-hot_latte_polunucia-color.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.coffee-cup-hot-mociato::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+
+    background-image: url('../img/chatSvg/set2_color/SVG/icon-hot_maciato-color.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.coffee-cup-hot-mocachino::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+
+    background-image: url('../img/chatSvg/set2_color/SVG/icon-hot_macachino-color.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.coffee-cup-hot-raf::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+
+    background-image: url('../img/chatSvg/set2_color/SVG/icon-hot_raf-color.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.coffee-cup-hot-filter::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+
+    background-image: url('../img/chatSvg/set2_color/SVG/icon-hot_coffee-filter-color.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.tea-chainik-hot::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+
+    background-image: url('../img/chatSvg/set2_color/SVG/icon-hot_tea-chainik-color.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.tea-chainik-hot-fruit::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+
+    background-image: url('../img/chatSvg/set2_color/SVG/icon-hot_tea_fruit-chainik-color.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.tea-packet::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+
+    background-image: url('../img/chatSvg/set2_color/SVG/icon-hot_tea-packet-color.svg');
     background-size: contain;
     background-repeat: no-repeat;
 }
