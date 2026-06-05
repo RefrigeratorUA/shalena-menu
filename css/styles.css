@@ -67,7 +67,7 @@
 
  /* Логотип */
  .logo {
-   position: absolute;
+   /* position: absolute; */
 
    /* left: 50%; */
    /* top: 40%; */
@@ -81,7 +81,7 @@
 
    /* pointer-events: none; */
 
-   z-index: 0;
+   /* z-index: 0; */
 
    /* filter:
      brightness(0) saturate(100%) invert(11%) sepia(20%) saturate(784%) hue-rotate(338deg) brightness(95%) contrast(92%); */
