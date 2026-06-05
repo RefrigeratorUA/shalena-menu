@@ -77,14 +77,14 @@
 
    width: 2000px;
 
-   opacity: .2;
+   opacity: .15;
 
    pointer-events: none;
 
    z-index: 0;
 
-   /* filter:
-     brightness(0) saturate(100%) invert(11%) sepia(20%) saturate(784%) hue-rotate(338deg) brightness(95%) contrast(92%); */
+   filter:
+     brightness(0) saturate(100%) invert(11%) sepia(20%) saturate(784%) hue-rotate(338deg) brightness(95%) contrast(92%);
  }
  
 
