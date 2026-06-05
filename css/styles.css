@@ -90,29 +90,30 @@
  .menu-main {
    /* 1. Masonry эффект: блоки липнут друг к другу */
    column-count: 2;
-   column-gap: 0px;
+   column-gap: 20px;
 
    /* 2. Высота: чтобы блоки понимали, куда тянуться */
    /* height: 3905px; */
-   height: 3810px;
+   /* height: 3810px; */
    column-fill: auto;
    /* padding: 0 50px 0 50px; */
    /* Важно: заполняем колонки по очереди */
 
-   width: 100%;
+   /* width: 100%; */
    /* border: 2px solid blue; */
    /* background-color: bisque; */
    /* Просто для контроля границ */
+   padding: 20px;
  }
 
  .emoji-list {
 
    /* 3. Обязательно block для колонок */
    display: block;
-   width: 97%;
+   width: 100%;
    margin: 0 auto;
-   margin-left: 16px;
-   margin-bottom: 30px;
+   /* margin-left: 16px; */
+   /* margin-top: 30px; */
    
 
    /* 4. Чтобы блоки "дышали" и заполняли высоту, 
@@ -122,7 +123,10 @@
    box-sizing: border-box;
    border: 3px solid #9CAF88;
    border-radius: 20px;
-   padding: 15px;
+   /* padding: 15px; */
+   padding: 0;
+   margin: 0;
+   margin-bottom: 20px;
 
    list-style: none;
 
