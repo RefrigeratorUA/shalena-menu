@@ -269,3 +269,38 @@
   
     /* z-index: -1; */
  }
+
+ /* Проба анимации */
+ .page-open {
+   width: 1920px;
+   height: 1080px;
+
+   transform-origin: left center;
+   transform-style: preserve-3d;
+
+   animation: pageOpen 1.5s ease-out forwards;
+ }
+
+ @keyframes pageOpen {
+
+   0% {
+     opacity: 0;
+
+     transform:
+       perspective(5000px) rotateY(-90deg);
+   }
+
+   70% {
+     opacity: 1;
+
+     transform:
+       perspective(5000px) rotateY(8deg);
+   }
+
+   100% {
+     opacity: 1;
+
+     transform:
+       perspective(5000px) rotateY(0deg);
+   }
+ }
