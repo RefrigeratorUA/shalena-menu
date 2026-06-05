@@ -69,17 +69,17 @@
  .logo {
    position: absolute;
 
-   left: 50%;
-   top: 40%;
+   /* left: 50%; */
+   /* top: 40%; */
    /* bottom: 50%; */
 
-   transform: translateX(-50%);
+   /* transform: translateX(-50%); */
 
    width: 2000px;
 
    opacity: .2;
 
-   pointer-events: none;
+   /* pointer-events: none; */
 
    z-index: 0;
 
