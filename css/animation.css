@@ -1,0 +1,49 @@
+.waffle-corner {
+    position: fixed;
+
+    right: -180px;
+    bottom: -180px;
+
+    width: 600px;
+
+    opacity: .2;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    animation: waffle-peek 10s ease-in-out infinite;
+}
+
+@keyframes waffle-peek {
+
+    0% {
+        transform:
+            rotate(-15deg) translate(0, 0);
+    }
+
+    20% {
+        transform:
+            rotate(-8deg) translate(-160px, -160px);
+    }
+
+    40% {
+        transform:
+            rotate(-5deg) translate(-190px, -190px);
+    }
+
+    60% {
+        transform:
+            rotate(-8deg) translate(-170px, -170px);
+    }
+
+    80% {
+        transform:
+            rotate(-12deg) translate(-130px, -130px);
+    }
+
+    100% {
+        transform:
+            rotate(-15deg) translate(0, 0);
+    }
+}
