@@ -283,6 +283,17 @@
     background-repeat: no-repeat;
 }
 
+.matcha-ice::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+
+    background-image: url('../img/chatSvg/set1_color/icon-matcha_ice-color.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .matcha-orange::before {
     content: '';
     display: inline-block;
